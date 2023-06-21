@@ -1,6 +1,6 @@
 package ch01;
 
-public class comment {
+public class Comment {
 	/**
 	 * document comment
 	 * @param args
