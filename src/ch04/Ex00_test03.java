@@ -8,9 +8,9 @@ public class Ex00_test03 {
 		System.out.println("성적은 "+score+" 학점은 "+calculateGrade(score)+addBonus(score));
 	}
 	private static String addBonus(int score) {
+		if (score<60) return "";
 		if (score%10>=7) return "+";
 		else if (score%10>=3) return "0";
-		else if (score<60) return "";
 		return "-";
 		
 	}
