@@ -11,12 +11,14 @@ public class Member {
 	public Member(String name, int age) {
 		super();
 		this.name = name;
-		this.age = age;
+		if(age>=0 && age<=150)
+			this.age = age;
 	}
 	public Member(String name, int age, String email) {
 		super();
 		this.name = name;
-		this.age = age;
+		if(age>=0 && age<=150)
+			this.age = age;
 		this.email = email;
 	}
 //	메소드

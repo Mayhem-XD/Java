@@ -15,6 +15,11 @@ public class Ex02_MemberExample {
 		Member member3 = new Member("Brian", 30);
 		System.out.println(member3);
 		
+		Member member4 = new Member("Tommy",-30);
+		System.out.println(member4);
+		
+		int totalAge = member1.getAge() + member2.getAge() + member3.getAge() + member4.getAge();
+		System.out.println(totalAge);
 	}
 
 }
