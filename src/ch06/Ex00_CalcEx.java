@@ -10,7 +10,7 @@ public class Ex00_CalcEx {
 		int sub = calc.sub(x, y);
 		double div = calc.div(x, y);
 		System.out.printf("add: %d, mul: %d, sub: %d, div: %.2f\n",add,mul,sub,div);
-
+		
 	}
 
 }
