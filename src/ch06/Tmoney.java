@@ -1,29 +1,48 @@
 package ch06;
 
 public class Tmoney {
-//	field
-//	age, cash
 	private int age;
 	private int cash;
+	public static final int CHILD_FARE = 730;
+	public static final int STUDENT_FARE = 1010;
+	public static final int ADULT_FARE = 1450;
 	
-//	생성자
-//	Tmoney(age)
-//	Tmoney(age,cash)
-	public Tmoney(int age) {}
+	public Tmoney(int age) {
+		this.age = age;
+	}
 	public Tmoney(int age, int cash) {
-		if(age>=0 && age<=150)
-			this.age = age;
-		if(cash>=0)
-			this.cash = cash;
+		this.age = age;
+		this.cash = cash;
 	}
-//	method
-//	ride(boolean) 7<=age<=12 -730/ 13~18 -1010/ 19~ -1450	/잔액부족 false, 
-	public boolean ride() {
-		
-		return false;
-	}
-//	charge(int cash)
-//	getCash()
-//	나이,10000 몇 번 탈 수 있는지
 	
+	public int getCash() {
+		return this.cash;
+	}
+	public void charge(int cash) {
+		this.cash += cash;
+	}
+	public boolean ride() {
+		if (age >= 7 && age <= 12) {
+			if (this.cash >= this.CHILD_FARE) {
+				this.cash -= this.CHILD_FARE; return true;
+			} 
+			return false;
+		} else if (age >= 13 && age <= 18) {
+			if (this.cash >= this.STUDENT_FARE) {
+				this.cash -= this.STUDENT_FARE; return true;
+			} 
+			return false;
+		} else if (age >= 19) {
+			if (this.cash >= this.ADULT_FARE) {
+				this.cash -= this.ADULT_FARE; return true;
+			} 
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Tmoney [age=" + age + ", cash=" + cash + "]";
+	}
 }
