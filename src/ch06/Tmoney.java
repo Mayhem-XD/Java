@@ -23,18 +23,18 @@ public class Tmoney {
 	}
 	public boolean ride() {
 		if (age >= 7 && age <= 12) {
-			if (this.cash >= this.CHILD_FARE) {
-				this.cash -= this.CHILD_FARE; return true;
+			if (this.cash >= Tmoney.CHILD_FARE) {
+				this.cash -= Tmoney.CHILD_FARE; return true;
 			} 
 			return false;
 		} else if (age >= 13 && age <= 18) {
-			if (this.cash >= this.STUDENT_FARE) {
-				this.cash -= this.STUDENT_FARE; return true;
+			if (this.cash >= Tmoney.STUDENT_FARE) {
+				this.cash -= Tmoney.STUDENT_FARE; return true;
 			} 
 			return false;
 		} else if (age >= 19) {
-			if (this.cash >= this.ADULT_FARE) {
-				this.cash -= this.ADULT_FARE; return true;
+			if (this.cash >= Tmoney.ADULT_FARE) {
+				this.cash -= Tmoney.ADULT_FARE; return true;
 			} 
 			return false;
 		}
