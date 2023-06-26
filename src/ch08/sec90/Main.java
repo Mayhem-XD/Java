@@ -1,0 +1,15 @@
+package ch08.sec90;
+
+public class Main {
+
+	private static void printSound(Soundable soundable) {
+		System.out.println(soundable.sound());
+	}
+	
+	public static void main(String[] args) {
+		printSound(new Cat());
+		printSound(new Dog());
+
+	}
+
+}
