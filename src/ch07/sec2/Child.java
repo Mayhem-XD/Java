@@ -1,5 +1,7 @@
 package ch07.sec2;
-
+/**
+ * 부모의 생성자 호출
+ */
 public class Child extends Parent {
 	int childInt;
 
