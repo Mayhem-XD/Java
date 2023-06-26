@@ -32,7 +32,7 @@ public class Ex04_IO {
 			System.out.print("정수나 실수를 입력하세요");
 		}
 		
-		
+		scan.close();
 		
 		
 	}

@@ -1,7 +1,7 @@
 package ch02;
 
 public class Ex01_Variable {
-	private int value=20;
+//	private int value=20;
 	public static void main(String[] args) {
 		int age = 21;
 		int score = 80;
