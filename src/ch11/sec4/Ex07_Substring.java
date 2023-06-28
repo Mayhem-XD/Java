@@ -15,14 +15,8 @@ public class Ex07_Substring {
 		String month = ssn.substring(2,4);
 		String day = ssn.substring(4,6);
 		
-		char gender = ssn.charAt(7);
+		year = (ssn.charAt(7)=='1'||ssn.charAt(7)=='2')?"19"+year : "20"+year; 
 		
-		if(gender == '1' || gender == '2') {
-			year = "19"+year;
-		}
-		else {
-			year = "20"+year;
-		}
 		
 		System.out.printf("%s-%s-%s\n",year,month,day);
 		
