@@ -8,8 +8,8 @@ public class Ex00_t2 {
 		int maxPal=0,x=0,y=0;
 		for(int i = 100;i<1000;i++) {
 			for(int k=i;k<1000;k++) {
-				String mul = String.valueOf(i*k);
-				if(Strings.isPalindrome(mul)) {
+				int mul =i*k;
+				if(Strings.isPalindrome(String.valueOf(mul))) {
 					if(i*k>maxPal) {
 						maxPal = i * k;
 						x = i; y=k;
