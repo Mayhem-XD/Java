@@ -1,4 +1,4 @@
-package ch13;
+package ch13.sec01;
 
 public class Board {
 	

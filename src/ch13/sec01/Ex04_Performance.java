@@ -1,4 +1,4 @@
-package ch13;
+package ch13.sec01;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

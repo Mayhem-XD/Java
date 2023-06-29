@@ -1,4 +1,4 @@
-package ch13;
+package ch13.sec01;
 
 //	import java.util.* 		사용가능한데 비권장
 

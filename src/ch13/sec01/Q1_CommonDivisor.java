@@ -1,4 +1,4 @@
-package ch13;
+package ch13.sec01;
 /**
  * 두 개의 정수를 입력으로 받아서, 두 수의 공약수를 찾으세요
  * 단, 두 수의 공약수를 리스트로 반환하는 메소드 getCommonDivisors()를 만들어 해결
