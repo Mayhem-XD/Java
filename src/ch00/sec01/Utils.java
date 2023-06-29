@@ -51,7 +51,7 @@ public class Utils {
     }
     public static String[] showModelPP() {
     	
-    	String[] cars = "buick skylark 320, plymouth satellite,amc reble sst,ford torino".split(",");
+    	String[] cars = "buick skylark 320,plymouth satellite,amc reble sst,ford torino".split(",");
     	
     	String[] manufactures = Arrays.stream(cars).map(x -> x.split(" ")[0].trim()).toArray(String[]::new);
 //    	String[] models = Arrays.stream(cars).map(x -> String.join(" ", Arrays.copyOfRange(x.split(" "), 1, x.split(" ").length)).trim()).toArray(String[]::new);
@@ -59,6 +59,13 @@ public class Utils {
     	
     	return manufactures;
     }
+    
+    
+    
+    
+    
+    
+    
     
 }
 
