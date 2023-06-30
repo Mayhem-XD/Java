@@ -24,7 +24,7 @@ public class Student {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(num);
+		return Objects.hash(this.num);
 	}
 	@Override
 	public boolean equals(Object obj) {
