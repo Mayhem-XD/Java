@@ -98,6 +98,12 @@ SELECT l.name, l.debut, r.title FROM girlgroup AS l
 	ON l.hit_song_id = r.sid
 	WHERE l.debut LIKE '2009%'
 
+# 데뷔일자가 빠른 5개 그룹의 히트송은?
+SELECT l.name, l.debut, r.title FROM girlgroup AS l
+	JOIN song AS r
+	ON l.hit_song_id = r.sid
+	ORDER BY r.debut
+	LIMIT 5;
 
 
 
