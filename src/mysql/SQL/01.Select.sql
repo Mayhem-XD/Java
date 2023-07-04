@@ -125,7 +125,33 @@ GROUP BY CountryCode HAVING COUNT(*) >= 100 ORDER BY AVG(Population) DESC;
 SELECT CountryCode, ROUND(AVG(Population)) avgPop, COUNT(*) FROM city
 GROUP BY CountryCode HAVING COUNT(*) >= 100 ORDER BY avgPop DESC;
 
-# 
+# 인구수 800만 보다 큰 도시의 국가명, 도시명, 인구수
+SELECT country.Name,city.Name,city.Population FROM city
+	INNER JOIN country ON city.CountryCode=country.Code		# INNER 생략가능 
+	WHERE city.Population>=8000000;
+	
+SELECT r.Name countryName,l.Name cityName,l.Population FROM city AS l
+	INNER JOIN country AS r ON l.CountryCode=r.Code
+	WHERE l.Population>=8000000;	
+	
+# 아시아 대륙에서 인구수가 가장 많은 도시 Top10
+SELECT l.Name ,r.Name,r.Population, l.Continent FROM country AS l JOIN city AS r
+	ON l.Code=r.CountryCode
+	WHERE l.Continent='Asia'
+	ORDER BY r.Population DESC LIMIT 10;
+	
+# 아시아 국가의 국가명과 공식언어
+SELECT l.Name,r.`Language` FROM country AS l JOIN countrylanguage AS r
+	ON l.Code = r.CountryCode
+	WHERE l.Continent = 'Asia' AND r.IsOfficial = TRUE;
+
+# 아시아 대륙에ㅔ서 인구수가 가장 많은 Top 10 도시에서 사용하는 공식언어
+SELECT l.`Name`, l.Population, r.`Language` FROM city AS l
+	JOIN countrylanguage AS r
+	ON l.CountryCode = r.CountryCode
+	WHERE r.IsOfficial = TRUE 
+	ORDER BY l.Population DESC 
+	LIMIT 10;
 
 
 
