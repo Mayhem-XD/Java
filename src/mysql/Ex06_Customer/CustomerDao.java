@@ -57,10 +57,10 @@ public class CustomerDao {
 		String sql = "SELECT * FROM customer WHERE uid=?;";
 		Customer c = new Customer();
 		try {
-			PreparedStatement pStmt = conn.prepareStatement(sql);
-			pStmt.setString(1, uid);
-			
-			ResultSet rs = pStmt.executeQuery();
+			PreparedStatement pstmt = conn.prepareStatement(sql);	//	SQL 구문을 실행시키는 기능을 가진 객체, 
+			pstmt.setString(1, uid);								//	객체 생성시에 지정된 SQL문만 사용가능, 재사용 불가
+																	//	동일한 SQL문을 반복하면 pstmt가 성능면에서 빠름, LIKE 키워드 사용불가
+			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				c.setUid(rs.getString(1));
 				c.setName(rs.getString(2));
@@ -68,13 +68,23 @@ public class CustomerDao {
 				c.setIsDeleted(rs.getInt(4));
 			}
 			rs.close();
-			pStmt.close();
+			pstmt.close();
 			conn.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return c;
 	}
+/*	execute() 메소드는 모든 유형의 SQL 문장과 함께 사용 가능
+ * 	boolean 값을 반환, 쿼리가 하나 이상의 ResultSet 객체를 반환할 수 있는 경우에 사용
+ * 
+ * executeQuery() 메소드는 SQL 쿼리를 실행하고, 쿼리에 의해 생성된 ResultSet 객체를 반환 
+ * 데이터베이스에서 데이터를 검색하는 SELECT 문을 실행하는데 사용
+ * 
+ * executeUpdate() 메소드는 데이터베이스에서 데이터를 추가(INSERT), 삭제(DELETE), 수정(UPDATE)하는 SQL 문을 실행
+ * INSERT, UPDATE 또는 DELETE 문과 같은 SQL 데이터 조작 언어(DML) 문장 또는 아무것도 반환하지 않는 SQL 문장(예: DDL 문장)을 실행하는데 사용
+ * 
+ */
 	
 	
 	public List<Customer> getCustomersList(){
