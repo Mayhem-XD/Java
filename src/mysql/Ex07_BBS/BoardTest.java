@@ -31,14 +31,14 @@ public class BoardTest {
 		System.out.println(board2);
 		
 		System.out.println("=========================================");
-		bDao.increaseReplyCount(3);
-		Board board3 = bDao.getBoard(3);
+		bDao.increaseReplyCount(8);
+		Board board3 = bDao.getBoard(8);
 		System.out.println(board3);
 		
 		System.out.println("=========================================");
 		Board board4 = bDao.getBoard(3);
 		board4.setTitle("세번째 글 수정");
-		board4.setContent("세번째 글을 수정");
+		board4.setContent("세번째 댓글을 수정");
 		board4.setViewCount(2);
 		board4.setReplyCount(3);
 		bDao.updateBoard(board4);

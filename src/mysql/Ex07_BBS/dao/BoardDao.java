@@ -93,6 +93,7 @@ public class BoardDao {
 	}
 	public void insertBoard(Board b) {
 		Connection conn = myConnection();
+//											  bid title content uid modTime viewCount replyCount
 		String sql = "insert into board values(default,?,?,?,default,default,default);";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
