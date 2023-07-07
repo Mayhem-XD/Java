@@ -28,7 +28,8 @@ public class CustomerDao {
 	private String database;
 	private String port;
 
-// Properties 객체생성후 mysql.properties 파일에서 호스트, 사용자 이름, 비밀번호, 데이터베이스 이름, 포트 번호를 읽어옴
+// Properties 객체생성후 mysql.properties 파일에서 호스트, 사용자 이름, 비밀번호,
+//		데이터베이스 이름, 포트 번호를 읽어옴
 	public CustomerDao() {
 		try {
 			Properties props = new Properties();
@@ -98,8 +99,8 @@ public Customer getCustomer(String uid) {
  * 데이터베이스에서 데이터를 검색하는 SELECT 문을 실행하는데 사용
  * 
  * executeUpdate() 메소드는 데이터베이스에서 데이터를 추가(INSERT), 삭제(DELETE), 수정(UPDATE)하는 SQL 문을 실행
- * INSERT, UPDATE 또는 DELETE 문과 같은 SQL 데이터 조작 언어(DML) 문장 또는 아무것도 반환하지 않는 SQL 문장(예: DDL 문장)을 실행하는데 사용
- * 
+ * INSERT, UPDATE 또는 DELETE 문과 같은 SQL 데이터 조작 언어(DML) 문장 
+ * 또는 아무것도 반환하지 않는 SQL 문장(예: DDL 문장)을 실행하는데 사용
  */		
 ~~~
 
