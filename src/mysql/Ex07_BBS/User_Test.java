@@ -38,6 +38,13 @@ public class User_Test {
 		System.out.println("=====================");
 		System.out.println(james);
 		System.out.println(maria);
+		System.out.println("=====================");
+		
+//		마리아 삭제
+		uDao.deleteUser("maria");
+		list = uDao.getUserList(10, 0);
+		for(User u: list)
+			System.out.println(u);
 		
 	}
 
