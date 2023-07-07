@@ -68,7 +68,7 @@ public class CustomerDao {
 ~~~ java
 
 // PreparedStatement은 SQL 구문을 실행시키는 기능을 가진 객체, 객체 생성시 지정된 SQL문만 사용가능, 재사용 불가
-// 동일한 SQL문을 반복하면 PreparedStatement 가 성능면에서 빠름, LIKE 키워드 사용불가
+// 동일한 SQL문을 반복하면 PreparedStatement 가 성능면에서 빠름
 
 public Customer getCustomer(String uid) {
 		Connection conn = myConnection();
