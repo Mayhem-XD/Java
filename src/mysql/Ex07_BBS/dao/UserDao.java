@@ -115,17 +115,17 @@ public class UserDao {
 	
 	public void updateUser(User u) {
 		Connection conn = myConnection();
-		String sql = "update users set password=?, uname=?, email=?, regDate=? where uid=?;";
+		String sql = "update users set password=?, uname=?, regDate=?, email=? where uid=?;";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, u.getPassword());
 			pstmt.setString(2, u.getUnameString());
-			pstmt.setString(3, u.getEmail());
-			pstmt.setString(4, u.getRegDate().toString());
+			pstmt.setString(3, u.getRegDate().toString());
+			pstmt.setString(4, u.getEmail());
 			pstmt.setString(5, u.getUid());
+			
 			pstmt.executeUpdate();
 			pstmt.close();conn.close();
-			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
