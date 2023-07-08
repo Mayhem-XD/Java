@@ -14,6 +14,10 @@
 > 
 <hr>
 <h2>수정중</h2>
+
+> ext jar 3개
+>
+> 
 <hr>
 <br><br><br><br>
 <h5>src/mysql/Ex06_Customer</h5>
