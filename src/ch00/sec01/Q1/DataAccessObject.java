@@ -1,4 +1,4 @@
-package ch00.sec01;
+package ch00.sec01.Q1;
 
 public interface DataAccessObject {
 	public abstract void select();
